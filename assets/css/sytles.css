@@ -14,33 +14,25 @@
 /*variables */
 :root {
     --parchment: #FCF5E5;
+    --coffee: #542a02;
     --light-coffee: #9c6f44;
     --lighter-coffee:#da9b60;
     --dark-coffee: #271300;
     --lightest-coffee:#fac695;
 }
 
-/* === Custom Fonts === 
-    this custom from was sourced from 1001fonts.com
-    attribution is included in the fonts folder
-*/
-@font-face {
-    font-family: 'Architex';
-    src: url('../fonts/Architex.ttf')
-}
+
 
 /* global styles */
 
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 }
 
 /* heading styles */
 
-h6 {
-    
-}
+
 
 /*
     element styles
@@ -48,12 +40,13 @@ h6 {
 
 footer {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
     margin: auto;
-    padding: 0;
+    padding: 3em 0 .5em 0;
+    font-size: 65%;
 }
 
 /* 
@@ -62,7 +55,7 @@ footer {
     the text is transparent so the background graident shows through
 */
 .gradient-text-coffee {
-    background-image: conic-gradient(#9c6f44, #271300, #9c6f44);
+    background-image: conic-gradient(var(--light-coffee), var(--coffee), var(--dark-coffee), var(--coffee), var(--light-coffee));
     background-size: 100%;
     background-clip: text;
     -webkit-text-fill-color: transparent;

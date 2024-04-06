@@ -15,11 +15,11 @@ main {
     flex-direction: column;
     margin: auto;
     width: 900px;
-    border-radius: -.3em;
-    border-color: linear-gradient(to right, var(--dark-coffee), var (--lightest-coffee));
-    border-width: 2px 0 2px 0;
+    border-radius: 1em;
+    border-color: var(--dark-coffee);
+    border-width: 0 3px 3px 0;
     border-style: solid;
-
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
     background-color: var(--parchment);
 
 }
@@ -42,6 +42,8 @@ h1 {
     margin: auto;
     padding: 1em 0 0 0;
     border: none;
+    font-size: 300%;
+    font-weight: 900;
 }
 
 /* === Class Styles === */
@@ -70,7 +72,7 @@ h1 {
     background-color: #ffffff;
     height: 2em;
     width: 100%;
-    border: none;
+    border: inset var(--lightest-coffee) 2px;
     padding-left: .6em;
 }
 
@@ -85,7 +87,8 @@ h1 {
     margin: auto;
     width: 100%;
     font-size: 150%;
-    font-weight: 900;
+    font-weight: bold;
+    letter-spacing: .1em;
 }
 
 .post textarea {
@@ -95,7 +98,7 @@ h1 {
     resize: none;
     width: 100%;
     padding: .2em .3em .3em .75em;
-    border: none;
+    border: inset var(--lightest-coffee) 2px;
 
 }
 
@@ -111,12 +114,15 @@ h1 {
     margin: auto;
     margin-top: 1em;
     width: 50%;
-    height: 3em;
+    height: 2em;
     background-color: white;
     padding-left: 1px;
     padding-right: 1px;
     border: outset var(--lightest-coffee);
-    border-radius: 10px;
+    border-radius: 5px;
+    font-size: 20pt;
+    font-weight: 900;
+    letter-spacing: .1em;
 }
 
 /*
