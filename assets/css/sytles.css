@@ -19,6 +19,16 @@
     --dark-coffee: #271300;
     --lightest-coffee:#fac695;
 }
+
+/* === Custom Fonts === 
+    this custom from was sourced from 1001fonts.com
+    attribution is included in the fonts folder
+*/
+@font-face {
+    font-family: 'Architex';
+    src: url('../fonts/Architex.ttf')
+}
+
 /* global styles */
 
 * {
