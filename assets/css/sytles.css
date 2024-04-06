@@ -1,1 +1,47 @@
 /* general style sheet for the project */
+/*
+    color-hexes for coffee colors from color-hex.com
+    code to set text gradients is inspired by this post by Sarah L. Fossheim:
+    https://fossheim.io/writing/posts/css-text-gradient/
+*/
+
+/* global styles */
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    color: pink;
+}
+
+/* 
+    this sets the background image to a linear-gradient designed to look like coffee 
+    it then renders the background only where text is
+    the text is transparent so the background graident shows through
+*/
+.gradient-text-coffee {
+    background-image: radial-gradient(#9c6f44, #271300, #9c6f44);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+/*
+    hex codes of shades of blue i like:
+    #bfced
+    #000000
+*/
+
+.colors {
+    color: #2d3b4c;
+    color: #bfcedb;
+    color: #0c1826;
+    /* dark navy */
+    color: #43474d;
+    color: #0a3635;
+    color: #084645;
+    color: #5aa5a4;
+    color: #338583;
+    color: #0daba8;
+
+}

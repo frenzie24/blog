@@ -5,19 +5,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/sytles.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
     <title>blog</title>
 </head>
 
 <body>
-    <form class="post">
-        <label for="userName">Username</label>
-        <input type="text" id="userName" name="userName"/>
-        <label for="postTitle">Username</label>
-        <input type="text" id="postTitle" name="postTitle"/>
-        <label for="comment">Comment</label>
-        <input type="text" id="comment" name="comment"/>
-        <input type="submit" value="Post" id="submit" />
-    </form>
+
+    <main>
+        <article>
+            <h1 class="gradient-text-coffee">Write a Blog Post</h1>
+            <form class="post gradient-text-coffee">
+                <label for="userName">Username</label>
+                <input type="text" id="userName" name="userName" />
+                <label for="postTitle">Title</label>
+                <input type="text" id="postTitle" name="postTitle" />
+                <label for="comment">Comment</label>
+                <textarea id="comment" name="comment">Your thoughts?</textarea>
+                <input type="submit" value="Post" id="submit" />
+            </form>
+        </article>
+    </main>
 </body>
 
 </html>

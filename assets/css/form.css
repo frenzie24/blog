@@ -1,1 +1,110 @@
 /* styling for forms */
+
+/* global vars */
+:root {
+    --parchment-color: #FCF5E5;
+  
+}
+/* global styles */
+
+* {
+
+}
+
+
+
+HTML {
+    border: none;
+}
+
+body {
+    border: none;
+
+}
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: auto;
+    width: 900px;
+    background-image: radial-gradient(#9c6f44, #271300, #9c6f44);
+    background-size: 100%;
+    background-clip: border-box;
+    border: none;
+    border-radius: .25em;
+    padding: .25em;
+    
+}
+/* main styles */
+article {
+    /* 
+    creates a linear-gradient bg color that contanis colors in the gradient with an angle
+    background: linear-gradient(45deg, rgba(191,227,233,.5) 75%, rgba(86,230,255,.5));
+    */
+    border: none;
+    background-color: var(--parchment-color);
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* <h> styles*/
+h1 {
+    margin: auto;
+    padding: 1em 0 0 0;
+    border: none;
+}
+
+/* class styles*/
+.post {
+
+    display: flex;
+    margin: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 800px;
+    border: none;
+}
+
+.post input {
+    margin: auto;
+    background-color: #ffffff;
+    height: 2em;
+    width: 90%;
+}
+
+.post label {
+    border: none;
+    margin: auto;
+    width: 90%;
+    font-size: 150%;
+    font-weight: 900;
+    padding: .5em 0 0 1em;
+}
+
+
+.post textarea {
+    margin: auto;
+    height: 8em;
+    background-color: #ffffff;
+    resize: none;
+    width: 90%;
+
+}
+
+/* id stylings */
+
+#submit {
+    margin: auto;
+    margin-top: 1em;
+    width: 50%;
+    height: 3em;
+}
+
+/*
+TODO:
+need to handle screen resizing
+*/
