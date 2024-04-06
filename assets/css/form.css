@@ -1,61 +1,59 @@
-/* styling for forms */
+/*
+ 
+this .css file is dependent on styles.css referenced in index.html 
+*/
 
-/* global vars */
-:root {
-    --parchment-color: #FCF5E5;
-    --light-coffee: #9c6f44;
-    --lighter-coffee:#da9b60;
-    --dark-coffee: #271300;
-}
-/* global styles */
+/* === Global Variables === */
 
 * {
-
+    padding: 0;
 }
 
-
-
-main{
+main {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     margin: auto;
     width: 900px;
-    border-radius: .25em;
-    padding: .25em;
-    background-color: var(--parchment-color);
-    
+    border-radius: -.3em;
+    border-color: linear-gradient(to right, var(--dark-coffee), var (--lightest-coffee));
+    border-width: 2px 0 2px 0;
+    border-style: solid;
+
+    background-color: var(--parchment);
+
 }
-/* main styles */
+
+/* === Main Styles === */
 article {
-   
+
     border: none;
-    width:100%;
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     margin: auto;
     background-clip: content-box;
-    padding: 0;
+    
 }
 
-/* <h> styles*/
+/* === Heading Styles === */
 h1 {
     margin: auto;
     padding: 1em 0 0 0;
     border: none;
 }
 
+/* === Class Styles === */
+
 .input-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     margin: auto;
-    background-clip: padding-box;
-    padding: 0 3px 0 30px;
+
 }
 
-/* class styles*/
 .post {
     display: flex;
     margin: auto;
@@ -73,21 +71,22 @@ h1 {
     height: 2em;
     width: 100%;
     border: none;
-    padding: 0;
-    -webkit-text-fill-color:  var(--light-coffee);
-    -moz-text-fill-color:  var(--light-coffee);
+    padding-left: .6em;
+}
+
+.post input::placeholder {
+    color: var(--lightest-coffee);
+    font-weight: bold;
+    opacity: 0.8;
 }
 
 .post label {
     border: none;
     margin: auto;
-    width: 90%;
+    width: 100%;
     font-size: 150%;
     font-weight: 900;
-    padding: .5em 0 0 1em;
-
 }
-
 
 .post textarea {
     margin: auto;
@@ -95,17 +94,18 @@ h1 {
     background-color: #ffffff;
     resize: none;
     width: 100%;
-    padding: 0;
+    padding: .2em .3em .3em .75em;
     border: none;
-    color: var(--light-coffee);
- 
-    -webkit-text-fill-color:  var(--light-coffee);
-    -moz-text-fill-color:  var(--light-coffee);
 
 }
 
+.post textarea::placeholder {
+    color: var(--lightest-coffee);
+    font-weight: bold;
+    opacity: 0.8;
+}
 
-/* id stylings */
+/* === id Styles === */
 
 #submit {
     margin: auto;
@@ -113,13 +113,10 @@ h1 {
     width: 50%;
     height: 3em;
     background-color: white;
-    -webkit-text-fill-color: var(--light-coffee);
-    -moz-text-fill-color: var(--light-coffee);
-    border-top: none;
-    border-right: ridge var(--lighter-coffee);
-    border-bottom: none;  
-    border-left: ridge var(--lighter-coffee);
-    padding: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+    border: outset var(--lightest-coffee);
+    border-radius: 10px;
 }
 
 /*

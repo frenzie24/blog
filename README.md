@@ -33,4 +33,5 @@ THEN I am presented with a link to the developer's portfolio.<br>
 ## Credit to code sources
 color-hexes for coffee colors from https://www.color-hex.com<br>
 code to set text gradients is inspired by this post by Sarah L. Fossheim:<br>
-    <span style="margin-left: 1em">https://fossheim.io/writing/posts/css-text-gradient/</span>
+    <span style="margin-left: 1em">https://fossheim.io/writing/posts/css-text-gradient/</span><br>
+custom font sourced from https://1001fonts.com attribution is inluded in fonts folder<br>
