@@ -3,8 +3,21 @@
     color-hexes for coffee colors from color-hex.com
     code to set text gradients is inspired by this post by Sarah L. Fossheim:
     https://fossheim.io/writing/posts/css-text-gradient/
+
+    parchment image sourced from:
+    https://www.freepik.com/free-photo/pastel-yellow-vignette-concrete-textured-background_17118471.htm#query=parchment&position=4&from_view=keyword&track=sph&uuid=4a472ed2-887f-40db-9750-5772edb9fec5
+    Image by rawpixel.com
+    on Freepik
 */
 
+
+/*variables */
+:root {
+    --parchment-color: #FCF5E5;
+    --light-coffee: #9c6f44;
+    --lighter-coffee:#da9b60;
+    --dark-coffee: #271300;
+}
 /* global styles */
 
 * {
@@ -19,11 +32,26 @@
     the text is transparent so the background graident shows through
 */
 .gradient-text-coffee {
-    background-image: radial-gradient(#9c6f44, #271300, #9c6f44);
+    background-image: radial-gradient(#9c6f44, #271300, #9c6f44, #271300, #9c6f44);
     background-size: 100%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+
+/* pretty looking parchment background */
+.parchment-background {
+    background-image: url("../images/pastel-yellow-vignette-concrete-textured-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* adds border to element with no top or bottom, ridge style, and light coffee color */
+.sides-border-ridge-lighter-coffee{
+    border-top: none;
+    border-right: ridge var(--lighter-coffee);
+    border-bottom: none;
+    border-left: ridge var(--lighter-coffee);
 }
 
 /*

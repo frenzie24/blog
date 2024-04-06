@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./assets/css/sytles.css">
     <link rel="stylesheet" href="./assets/css/form.css">
     <title>blog</title>
@@ -12,16 +13,23 @@
 
 <body>
 
-    <main>
-        <article>
-            <h1 class="gradient-text-coffee">Write a Blog Post</h1>
-            <form class="post gradient-text-coffee">
+    <main class="parchment-background">
+        <article class="gradient-text-coffee">
+            <h1>Write a Blog Post</h1>
+            <form class="post">
                 <label for="userName">Username</label>
-                <input type="text" id="userName" name="userName" />
+                <div class="input-wrapper">
+                    <input type="text" id="userName" name="userName" />
+                </div>
                 <label for="postTitle">Title</label>
-                <input type="text" id="postTitle" name="postTitle" />
+                <div class="input-wrapper">
+                    <input type="text" id="postTitle" name="postTitle" />
+
+                </div>
                 <label for="comment">Comment</label>
-                <textarea id="comment" name="comment">Your thoughts?</textarea>
+                <div class="input-wrapper">
+                    <textarea id="comment" name="comment">Your thoughts?</textarea>
+                </div>
                 <input type="submit" value="Post" id="submit" />
             </form>
         </article>

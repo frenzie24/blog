@@ -3,7 +3,9 @@
 /* global vars */
 :root {
     --parchment-color: #FCF5E5;
-  
+    --light-coffee: #9c6f44;
+    --lighter-coffee:#da9b60;
+    --dark-coffee: #271300;
 }
 /* global styles */
 
@@ -13,41 +15,28 @@
 
 
 
-HTML {
-    border: none;
-}
-
-body {
-    border: none;
-
-}
 main{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     margin: auto;
     width: 900px;
-    background-image: radial-gradient(#9c6f44, #271300, #9c6f44);
-    background-size: 100%;
-    background-clip: border-box;
-    border: none;
     border-radius: .25em;
     padding: .25em;
+    background-color: var(--parchment-color);
     
 }
 /* main styles */
 article {
-    /* 
-    creates a linear-gradient bg color that contanis colors in the gradient with an angle
-    background: linear-gradient(45deg, rgba(191,227,233,.5) 75%, rgba(86,230,255,.5));
-    */
+   
     border: none;
-    background-color: var(--parchment-color);
     width:100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     margin: auto;
+    background-clip: content-box;
+    padding: 0;
 }
 
 /* <h> styles*/
@@ -57,9 +46,17 @@ h1 {
     border: none;
 }
 
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    background-clip: padding-box;
+    padding: 0 3px 0 30px;
+}
+
 /* class styles*/
 .post {
-
     display: flex;
     margin: auto;
     align-items: flex-start;
@@ -67,13 +64,16 @@ h1 {
     flex-wrap: wrap;
     width: 800px;
     border: none;
+    background-clip: content-box;
 }
 
 .post input {
     margin: auto;
     background-color: #ffffff;
     height: 2em;
-    width: 90%;
+    width: 100%;
+    border: none;
+    padding: 0;
 }
 
 .post label {
@@ -83,6 +83,7 @@ h1 {
     font-size: 150%;
     font-weight: 900;
     padding: .5em 0 0 1em;
+
 }
 
 
@@ -91,9 +92,16 @@ h1 {
     height: 8em;
     background-color: #ffffff;
     resize: none;
-    width: 90%;
+    width: 100%;
+    padding: 0;
+    border: none;
+    color: var(--light-coffee);
+ 
+    -webkit-text-fill-color:  var(--light-coffee);
+    -moz-text-fill-color:  var(--light-coffee);
 
 }
+
 
 /* id stylings */
 
@@ -102,6 +110,14 @@ h1 {
     margin-top: 1em;
     width: 50%;
     height: 3em;
+    background-color: white;
+    -webkit-text-fill-color: var(--light-coffee);
+    -moz-text-fill-color: var(--light-coffee);
+    border-top: none;
+    border-right: ridge var(--lighter-coffee);
+    border-bottom: none;  
+    border-left: ridge var(--lighter-coffee);
+    padding: 0;
 }
 
 /*
