@@ -74,6 +74,8 @@ h1 {
     width: 100%;
     border: none;
     padding: 0;
+    -webkit-text-fill-color:  var(--light-coffee);
+    -moz-text-fill-color:  var(--light-coffee);
 }
 
 .post label {

@@ -54,6 +54,13 @@
     border-left: ridge var(--lighter-coffee);
 }
 
+/* forces text in element to light coffee color */
+.light-coffee-text {
+    color: var(--light-coffee);
+    -webkit-text-fill-color:  var(--light-coffee);
+    -moz-text-fill-color:  var(--light-coffee);
+}
+
 /*
     hex codes of shades of blue i like:
     #bfced
