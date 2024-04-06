@@ -15,23 +15,31 @@
 
     <main class="parchment-background">
         <article class="gradient-text-coffee">
-            <h1>Write a Blog Post</h1>
+            <h1>Post Your Thoughts</h1>
             <form class="post">
                 <label for="userName">Username</label>
                 <div class="input-wrapper">
-                    <input type="text" id="userName" name="userName" />
+                    <input type="text" id="userName" name="userName" class="light-coffee-text"
+                        placeholder="Your Username" />
                 </div>
                 <label for="postTitle">Title</label>
                 <div class="input-wrapper">
-                    <input type="text" id="postTitle" name="postTitle" />
+                    <input type="text" id="postTitle" name="postTitle" class="light-coffee-text"
+                        placeholder="Title Your Post" />
 
                 </div>
                 <label for="comment">Comment</label>
                 <div class="input-wrapper">
-                    <textarea id="comment" name="comment">Your thoughts?</textarea>
+                    <textarea id="comment" name="comment" class="light-coffee-text"
+                        placeholder="Your thoughts?"></textarea>
                 </div>
-                <input type="submit" value="Post" id="submit" />
+                <input type="submit" value="POST" id="submit" class="light-coffee-text"/>
             </form>
+            <footer>
+                Usernames are not unique.<br>
+                Custom Font Sourced From<br>
+                <a href="www.fonfabric.com">Fontfabric.com</a>
+            </footer>
         </article>
     </main>
 </body>
