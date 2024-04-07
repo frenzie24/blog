@@ -26,7 +26,7 @@ function getItem(store) {
     a boolean and return it
      */
     let val = localStorage.getItem(store);
-    return val;
+    return JSON.parse(val);
 }
 
 /* items are stored as strings
