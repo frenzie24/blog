@@ -5,37 +5,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/styles.css" >
-    <link rel="stylesheet" href="./assets/css/blog.css" >
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
     <title>Document</title>
 </head>
 
 <body>
     <main>
-        <article>
-            <nav>
-                <h1>Public Blog</h1>
-               
-            </nav>
 
-            <ol id="posts" class="posts">
-                <section class="post" >
+        <nav>
+            <h1>Public Blog</h1>
+
+        </nav>
+        <article class="posts">
+            <ol>
+                <li class="post">
                     <h3>POST TITLE</h3>
                     <p id="content">CONTENT</p>
                     <footer>Posted by: USERNAME</footer>
-                </section>
-                <aside>
-                    <nav>
-                        <div>
-                            <a href="./index.html">Back</a>
-                            <a href="#posts">Posts</a>
-                            <button id="dark-mode"> </button>
+                </li>
 
-                        </div>   
-                    </nav>
-                </aside>
             </ol>
         </article>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Back</a>
+                    </li>
+                    <li> <a href="#posts">Posts</a>
+                    </li>
+                    <li> <button id="dark-mode"> </button>
+                    </li>
+                </ul>
+
+            </nav>
+        </aside>
     </main>
 </body>
 
