@@ -37,14 +37,28 @@ article {
     
 }
 
-/* === Heading Styles === */
-h1 {
-    margin: auto;
-    padding: 1em 0 0 0;
-    border: none;
-    font-size: 300%;
-    font-weight: 900;
+/* === header styles === */
+header {
+    display: flex;
+   padding: 0 20px 0 20px;
+
 }
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-self: flex-start;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    display: flex;
+    align-items: center;
+}
+
+/* === Heading Styles === */
+
 
 /* === Class Styles === */
 
