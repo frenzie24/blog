@@ -52,20 +52,20 @@ function checkToggle() {
 
 // toggles the style of the first article element in a document between light and dark
 function toggleMode() {
-   
+
     // var on = checkToggle();
-    
+
     let on = checkToggle();
-    
+
     console.log(`${msg.darkStatus}${on}\n${msg.darkChange}`);
     on = !on;
     setElementsDarkMode(on);
 
-    let toggle = $('#darkModeToggle');//document.getElementById("darkModeToggle");
+    let toggle = $('#darkModeToggle');//$("#darkModeToggle");
     debugger;
     console.log(`${msg.darkStatus}${!on}`);
     toggle.attr('checked', on);
-   // toggle.setAttribute("checked",!on);
+    // toggle.setAttribute("checked",!on);
     setItem("toggle", on);
 }
 
@@ -77,25 +77,26 @@ function setup() {
     let on = checkToggle();
 
     setElementsDarkMode(on);
-    if (on){
-    toggle.setAttribute("checked",'');
+    if (on) {
+        toggle.attr("checked", '');
     }
-    ///   toggle.value = on;
 }
 
 function setElementsDarkMode(on) {
-    let header = document.getElementById("navHeader");
-    let article = document.getElementById("postContainer");
-    let main = document.getElementById("main");
+    let header = $("#navHeader");
+    let nav = $('#navHeader nav:first');
+    let article = $("#postContainer");
+    let main = $("#main");
 
-    main.className = on ? bgColors.dark : bgColors.light;
-    article.className = on ? fontColors.dark : fontColors.light;
-    header.className = on ? bgColors.dark : bgColors.light;
-    header.children[0].className = on ? fontColors.dark : fontColors.light;
-    debugger;
+
+    main.attr('class', on ? bgColors.dark : bgColors.light);
+    article.attr('class', on ? fontColors.dark : fontColors.light);
+    header.attr('class', on ? bgColors.dark : bgColors.light);
+    nav.attr('class', on ? fontColors.dark : fontColors.light);
+   
     return on;
 }
 
-$(()=>{
+$(() => {
     setup();
 });
