@@ -61,25 +61,25 @@ function toggleMode() {
     on = !on;
     setElementsDarkMode(on);
 
-    let toggle = document.getElementById("darkModeToggle");
-
+    let toggle = $('#darkModeToggle');//document.getElementById("darkModeToggle");
+    debugger;
     console.log(`${msg.darkStatus}${!on}`);
-    
-    toggle.setAttribute("checked",!on);
+    toggle.attr('checked', on);
+   // toggle.setAttribute("checked",!on);
     setItem("toggle", on);
 }
 
 //sets the slider to the correct position relative to the saved dark-mode state
 function setup() {
 
-    let toggle = document.getElementById("darkModeToggle");
+    let toggle = $("#darkModeToggle");
 
     let on = checkToggle();
 
     setElementsDarkMode(on);
     if (on){
     toggle.setAttribute("checked",'');
-    }debugger;
+    }
     ///   toggle.value = on;
 }
 
@@ -92,10 +92,10 @@ function setElementsDarkMode(on) {
     article.className = on ? fontColors.dark : fontColors.light;
     header.className = on ? bgColors.dark : bgColors.light;
     header.children[0].className = on ? fontColors.dark : fontColors.light;
+    debugger;
     return on;
 }
 
-window.onload = () => {
+$(()=>{
     setup();
-}
-
+});
