@@ -20,7 +20,7 @@ const msg = {
     darkStatus: "Current dark-mode status: ",
     darkChange: "Dark-mode toggle selected.",
     error: {
-        input: "Error submitting, input invalid.\nPlease make sure all fields have been entered."
+        input: "Please make sure all fields have been entered."
     }
 };
 
@@ -52,50 +52,51 @@ function checkToggle() {
 
 // toggles the style of the first article element in a document between light and dark
 function toggleMode() {
-   
+
     // var on = checkToggle();
-    
+
     let on = checkToggle();
-    
+
     console.log(`${msg.darkStatus}${on}\n${msg.darkChange}`);
     on = !on;
     setElementsDarkMode(on);
 
-    let toggle = document.getElementById("darkModeToggle");
-
+    let toggle = $('#darkModeToggle');//$("#darkModeToggle");
+    debugger;
     console.log(`${msg.darkStatus}${!on}`);
-    
-    toggle.setAttribute("checked",!on);
+    toggle.attr('checked', on);
+    // toggle.setAttribute("checked",!on);
     setItem("toggle", on);
 }
 
 //sets the slider to the correct position relative to the saved dark-mode state
 function setup() {
 
-    let toggle = document.getElementById("darkModeToggle");
+    let toggle = $("#darkModeToggle");
 
     let on = checkToggle();
 
     setElementsDarkMode(on);
-    if (on){
-    toggle.setAttribute("checked",'');
-    }debugger;
-    ///   toggle.value = on;
+    if (on) {
+        toggle.attr("checked", '');
+    }
 }
 
 function setElementsDarkMode(on) {
-    let header = document.getElementById("navHeader");
-    let article = document.getElementById("postContainer");
-    let main = document.getElementById("main");
+    let header = $("#navHeader");
+    let nav = $('#navHeader nav:first');
+    let article = $("#postContainer");
+    let main = $("#main");
 
-    main.className = on ? bgColors.dark : bgColors.light;
-    article.className = on ? fontColors.dark : fontColors.light;
-    header.className = on ? bgColors.dark : bgColors.light;
-    header.children[0].className = on ? fontColors.dark : fontColors.light;
+
+    main.attr('class', on ? bgColors.dark : bgColors.light);
+    article.attr('class', on ? fontColors.dark : fontColors.light);
+    header.attr('class', on ? bgColors.dark : bgColors.light);
+    nav.attr('class', on ? fontColors.dark : fontColors.light);
+   
     return on;
 }
 
-window.onload = () => {
+$(() => {
     setup();
-}
-
+});
