@@ -8,13 +8,24 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/form.css">
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
     <title>blog</title>
 </head>
 
 <body>
 
-    <main>
-        <article class="gradient-text-coffee">
+    <main id="main">
+        <header id="navHeader">
+            <nav>
+                <a href="blog.html" ><h2>Public Blog</h2></a>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleMode()">
+                    <span class="slider"></span>
+                </label>
+            </nav>
+        </header>
+        <article id="postContainer" class="gradient-text-coffee">
             <h1>Post Your Thoughts</h1>
             <form class="post">
                 <label for="userName">Username</label>
@@ -33,7 +44,7 @@
                     <textarea id="comment" name="comment" class="light-coffee-text"
                         placeholder="Your thoughts?"></textarea>
                 </div>
-                <input type="submit" value="POST" id="submit" class="light-coffee-text"/>
+                <button type="button" id="post" class="light-coffee-text">POST</button>
             </form>
             <footer>
                 Usernames are not unique.<br>
@@ -42,6 +53,8 @@
             </footer>
         </article>
     </main>
+    
+<script>setup()</script>
 </body>
 
 </html>
