@@ -20,7 +20,7 @@ const msg = {
     darkStatus: "Current dark-mode status: ",
     darkChange: "Dark-mode toggle selected.",
     error: {
-        input: "Error submitting, input invalid.\nPlease make sure all fields have been entered."
+        input: "Please make sure all fields have been entered."
     }
 };
 
