@@ -34,13 +34,16 @@ function generateLi(data) {
 function generatePost(data) {
     var postList = document.getElementById("postList");
     var post = generateLi(data);
+    postList.appendChild([post]);
 
 }
 
 function setup() {
     let posts = getItem("posts");
     if (posts.length >0) {
-        posts.foreach((Object) => {} );
+        posts.foreach((post) => {
+            generatePost(post);
+        } );
     }
 
 }
