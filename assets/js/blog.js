@@ -25,41 +25,44 @@ function generateSimpleTag(tag, val) {
     return element;
 }
 
-function generateLi(data) {
-    let li = generateElement("li", { name: "post", class: "post", id: "post", style: "{}", key: data.key });
-  
-    let h3 = generateSimpleTag("h2", data.postTitle);
 
-    let h2 = generateElement("h3",{ id: 'comment' });
-    h2.append( `${postString.userName} ${data.userName}`)
-    let p = generateElement("p", { id: 'comment' });
-    p.append(data.comment);
-    let timeStamp = data.timeStamp.split(',');
-    let time = generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`);
-
-    // you can append multiple children in one line with jquery
-    li.append( h3,  h2, time, p);
-  
-    return li;
-
-}
 
 function generatePost(data) {
     //let posts = $("#posts");
-    let post = generateLi(data);
-    post.css("list-style", "none");
+    // spread operator to combine objs
+    const postData = {
+        name: "post",
+        name: "post",
+        class: "post",
+        id: "post",
+        style: "",
+        ...data
+    };
+
+    let timeStamp = data.timeStamp.split(',');
+    let children = [
+        generateSimpleTag("h2", data.postTitle),
+        generateElement("h3", { id: 'comment' }).append(`${postString.userName} ${data.userName}`),
+        generateElement("p", { id: 'comment' }).append(data.comment),
+        generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`)
+    ];
+    let post = generateElement("li", postData);
+ 
+    // you can append multiple children in one line with jquery
+    post.append(children);
     return post;
-   // posts.append(post);
+    // posts.append(post);
 }
 
 function initBlog() {
     console.log('setup called')
-    $("#posts").empty();
+    let postsOL = $("#posts");
+
     let posts = getItem("posts");
-    let postOlLi = [];
+    let postsOlLi = [];
     posts.forEach((post) => {
-        postOlLi.push(generatePost(post));
+        postsOlLi.push(generatePost(post));
     })
-    $("#posts").append(...postOlLi);
+    postsOL.empty().css('list-style', 'none').append(...postsOlLi);
 
 }
