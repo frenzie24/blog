@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/blog.css">
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/blog.js"></script>
+    
     <title>Document</title>
 </head>
 
@@ -17,12 +20,12 @@
             <h1>Public Blog</h1>
 
         </nav>
-        <article class="posts">
-            <ol>
+        <article class="posts" >
+            <ol id="postList">
                 <li class="post">
                     <h3>POST TITLE</h3>
+                    <h2>Posted by: </h2><h2 id="userName"></h2>
                     <p id="content">CONTENT</p>
-                    <footer>Posted by: USERNAME</footer>
                 </li>
 
             </ol>
