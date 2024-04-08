@@ -26,7 +26,7 @@ function generateSimpleTag(tag, val) {
 }
 
 function generateLi(data) {
-    let li = generateElement("li", { name: "post", class: "post", id: "post", key: data.key });
+    let li = generateElement("li", { name: "post", class: "post", id: "post", style: "{}", key: data.key });
   
     let h3 = generateSimpleTag("h2", data.postTitle);
 
@@ -45,19 +45,20 @@ function generateLi(data) {
 }
 
 function generatePost(data) {
-    let postList = $("#postList");
+    //let posts = $("#posts");
     let post = generateLi(data);
-    postList.append(post);
-
+    return post;
+   // posts.append(post);
 }
 
-function setup() {
+function initBlog() {
     console.log('setup called')
-    $("#postList").empty();
+    $("#posts").empty();
     let posts = getItem("posts");
-
+    let postOlLi = [];
     posts.forEach((post) => {
-        generatePost(post);
+        postOlLi.push(generatePost(post));
     })
+    $("#posts").append(...postOlLi);
 
 }

@@ -6,8 +6,7 @@
 }
 
 main {
-    flex-direction: row;
-    flex-wrap: wrap;
+   
 }
 
 main>nav {
@@ -62,7 +61,7 @@ ul {
     flex-wrap: wrap;
     justify-content: left;
     align-items: flex-start;
-    width: 850px;
+    width: 800px;
 }
 
 .posts ol {

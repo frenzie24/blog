@@ -70,7 +70,8 @@ function toggleMode() {
 }
 
 //sets the slider to the correct position relative to the saved dark-mode state
-function setup() {
+// sets dark mode to saved state
+function initLogic() {
 
     let toggle = $("#darkModeToggle");
 
@@ -97,6 +98,7 @@ function setElementsDarkMode(on) {
     return on;
 }
 
-$(() => {
-    setup();
+$(function(){
+    initLogic();
+    initBlog();
 });
