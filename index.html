@@ -16,16 +16,16 @@
 <body>
 
     <main id="main">
-        <header>
+        <header id="navHeader">
             <nav>
                 <a href="blog.html" ><h2>Public Blog</h2></a>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleMode()">
                     <span class="slider"></span>
                 </label>
             </nav>
         </header>
-        <article class="gradient-text-coffee">
+        <article id="postContainer" class="gradient-text-coffee">
             <h1>Post Your Thoughts</h1>
             <form class="post">
                 <label for="userName">Username</label>
@@ -53,6 +53,8 @@
             </footer>
         </article>
     </main>
+    
+<script>setup()</script>
 </body>
 
 </html>
