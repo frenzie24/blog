@@ -47,6 +47,7 @@ function generateLi(data) {
 function generatePost(data) {
     //let posts = $("#posts");
     let post = generateLi(data);
+    post.css("list-style", "none");
     return post;
    // posts.append(post);
 }
