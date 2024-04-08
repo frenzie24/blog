@@ -9,20 +9,7 @@ this .css file is dependent on styles.css referenced in index.html
     padding: 0;
 }
 
-main {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    margin: auto;
-    width: 900px;
-    border-radius: 1em;
-    border-color: var(--dark-coffee);
-    border-width: 0 3px 3px 0;
-    border-style: solid;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
-    background-color: var(--parchment);
 
-}
 
 /* === Main Styles === */
 article {
@@ -35,26 +22,6 @@ article {
     margin: auto;
     background-clip: content-box;
     
-}
-
-/* === header styles === */
-header {
-    display: flex;
-   padding: 0 20px 0 20px;
-
-}
-
-header nav {
-    width: 100%;
-    display: flex;
-    justify-self: flex-start;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav a {
-    display: flex;
-    align-items: center;
 }
 
 /* === Heading Styles === */

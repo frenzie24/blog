@@ -29,6 +29,21 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
 }
+a{
+  text-decoration: none;
+}
+
+article {
+
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto;
+  background-clip: content-box;
+  
+}
 
 /* heading styles */
 
@@ -39,6 +54,28 @@ h1 {
     font-size: 300%;
     font-weight: 900;
 }
+
+
+/* === header styles === */
+header {
+  display: flex;
+ padding: 0 20px 0 20px;
+
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-self: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+}
+
 
 /*
     element styles
@@ -54,6 +91,23 @@ footer {
     padding: 3em 0 .5em 0;
     font-size: 65%;
 }
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto;
+  width: 900px;
+  border-radius: 1em;
+  border-color: var(--dark-coffee);
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+  background-color: var(--parchment);
+
+}
+/* ### START TEXT STYLINGS */
+/*#region text stylings*/
 
 /* 
     this sets the background image to a linear-gradient designed to look like coffee 
@@ -74,15 +128,6 @@ footer {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-}
-
-.dark-mode {
-    background-color: var(--dark-coffee);
-    color: var(--parchment);
-    -webkit-text-fill-color: revert;
-    -moz-text-fill-color: revert;
-    border-radius: 1em;
-    box-shadow: none;
 }
 
 /* pretty looking parchment background */
@@ -114,7 +159,21 @@ footer {
     -webkit-text-fill-color:  var(--light-coffee);
     -moz-text-fill-color:  var(--light-coffee);
 }
+/*#endregion*/
+/* ### END TEXT STYLINGS*/
+
+/* dark-mode style */
+.dark-mode {
+  background-color: var(--dark-coffee);
+  color: var(--parchment);
+  -webkit-text-fill-color: revert;
+  -moz-text-fill-color: revert;
+  border-radius: 1em;
+  box-shadow: none;
+}
+
 /* switch slider styling copied from wcschools.com and edited */
+/*#region slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -177,7 +236,7 @@ footer {
   .slider.round:before {
     border-radius: 50%;
   }
-
+/*#endregion slider */
 /*
     hex codes of shades of blue i like:
     #bfced

@@ -95,3 +95,7 @@ function setElementsDarkMode(on) {
     return on;
 }
 
+window.onload = () => {
+    setup();
+}
+

@@ -14,18 +14,24 @@
 </head>
 
 <body>
-    <main>
+    <main id="main">
 
-        <nav>
-            <h1>Public Blog</h1>
-
-        </nav>
-        <article class="posts" >
+        <header id="navHeader">
+            <nav>
+                <a href="blog.html" ><h2>Public Blog</h2></a>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleMode()">
+                    <span class="slider"></span>
+                </label>
+            </nav>
+        </header>
+        <article id="postContainer" class="gradient-text-coffee">
             <ol id="postList">
                 <li class="post">
-                    <h3>POST TITLE</h3>
-                    <h2>Posted by: </h2><h2 id="userName"></h2>
-                    <p id="content">CONTENT</p>
+                    <h2>POST TITLE</h3>
+                    <h3 id="userName">POSTED BY: USERNAME</h2>
+                    <h4>AT</h4>
+                    <p id="comment">CONTENT</p>
                 </li>
 
             </ol>
@@ -44,6 +50,7 @@
             </nav>
         </aside>
     </main>
+    <script>setup()</script>
 </body>
 
 </html>
