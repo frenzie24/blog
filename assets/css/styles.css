@@ -122,7 +122,15 @@ main {
     -moz-text-fill-color: transparent;
 }
 
-.dark-mode-gradient-text {
+.gradient-text-light-coffee {
+  background-image: conic-gradient(var(--parchment), var(--lightest-coffee), var(--parchment), var(--lightest-coffee), var(--parchment));
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.gradient-text-dark-coffee {
     background-image: conic-gradient(var(--lightest-coffee), var(--light-coffee), var(--lighter-coffee), var(--light-coffee), var(--lightest-coffee));
     background-size: 100%;
     background-clip: text;

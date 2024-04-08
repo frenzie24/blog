@@ -66,3 +66,8 @@ function initBlog() {
     postsOL.empty().css('list-style', 'none').append(...postsOlLi);
 
 }
+
+$(function(){
+    initBlog();
+   
+});

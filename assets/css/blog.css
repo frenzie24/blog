@@ -34,7 +34,7 @@ h4,
 h5,
 h6 {
     padding-top: 0;
-    margin: auto;
+    
     border-width: 0 0 2px;
     border-color: var(--light-coffee);
     border-style: groove;

@@ -4,8 +4,9 @@
 
 const stores = { toggle: "toggle" };
 const fontColors = {
-    dark: "dark-mode-gradient-text",
+    dark: "gradient-text-dark-coffee",
     light: "gradient-text-coffee",
+    lighter: "gradient-text-light-coffee"
 }
 
 // our background elements 'light' mode is just the relevant default tag styling
@@ -83,22 +84,20 @@ function initLogic() {
     }
 }
 
+//sets styles to dark or light mode
 function setElementsDarkMode(on) {
-    let header = $("#navHeader");
-    let nav = $('#navHeader nav:first');
-    let article = $("#postContainer");
     let main = $("#main");
-
-
     main.attr('class', on ? bgColors.dark : bgColors.light);
-    article.attr('class', on ? fontColors.dark : fontColors.light);
-    header.attr('class', on ? bgColors.dark : bgColors.light);
-    nav.attr('class', on ? fontColors.dark : fontColors.light);
+    const title = $("title").text();
    
+    main.children("article").attr('class', on ? title == 'Blog' ? fontColors.lighter : fontColors.dark : fontColors.light);
+    $("#topNav").attr('class', on ? title == 'Blog' ? fontColors.lighter : fontColors.dark : fontColors.light);
+    $("#navHeader").attr('class', on ? bgColors.dark : bgColors.light);
+
     return on;
 }
 
-$(function(){
+$(function () {
     initLogic();
-    initBlog();
+
 });
