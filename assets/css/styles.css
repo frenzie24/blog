@@ -106,7 +106,7 @@ main {
   background-color: var(--parchment);
 
 }
-/* ### START TEXT STYLINGS */
+
 /*#region text stylings*/
 
 /* 
@@ -160,7 +160,7 @@ main {
     -moz-text-fill-color:  var(--light-coffee);
 }
 /*#endregion*/
-/* ### END TEXT STYLINGS*/
+
 
 /* dark-mode style */
 .dark-mode {
