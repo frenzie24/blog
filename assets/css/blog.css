@@ -15,7 +15,6 @@ main>nav {
 
 aside {
     display: flex;
-    align-self: flex-end;
     width: 100px;
 }
 
@@ -29,7 +28,7 @@ aside+nav {
 }
 
 h2,
-h3,
+
 h4,
 h5,
 h6 {
@@ -46,25 +45,26 @@ footer {
 
 ul {
     list-style: none;
-    maring-left: 3em;
+    padding-left: 1em;
 }
 
 /* === styling for classes === */
 .post{
-    border-width: 2px 0 0 0;
+    border-width: 2px 2px 0 2px;
     border-color: var(--light-coffee);
     border-style: groove;
-    padding: 0 0 0 2em
+    padding: 0 1em 0 1em;
+    margin-right: 1em;
   /*   width: 100%; *//* 
     background-color: var(--lightest-coffee); */
     
 }
 .post p{
-    margin: auto;
     margin-right: 1em;
-    padding: 1em 0em 1em 0em;
+    margin-left: 1em;
+    padding:.3em;
     background-color: var(--parchment);
-    border-width: 0 0 2px 0;
+    border-width: 1px 0 1px 0;
     border-color: var(--light-coffee);
     border-style: groove;
     color: var(--coffee);
@@ -72,17 +72,29 @@ ul {
     -moz-text-fill-color: var(--coffee);
 }
 
-
-.posts {
-    display: flex;
-    flex-direction: row;
+.post h3, h4, h5, h6 {
+    margin-left: .5em;
+}
+.post h6 {
+    margin: 0;
+    padding-left: 1.5em;
+}
+#posts {
+   display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    align-items: flex-start;
-    width: 800px;
+    width: 80%;
 }
 
-.posts ol {
-    width: 100%;
+#postsOl {
+    display: flex;
+    flex-direction: column;
     list-style: none;
+    padding: 0 1em 0 1em;
+  
+}
+
+#userName {
+    margin-bottom: 0;
+    border: none;
+
 }

@@ -42,9 +42,11 @@ function generatePost(data) {
     let timeStamp = data.timeStamp.split(',');
     let children = [
         generateSimpleTag("h2", data.postTitle),
-        generateElement("h3", { id: 'comment' }).append(`${postString.userName} ${data.userName}`),
+
+        generateElement("h3", { id: 'userName' }).append(`${postString.userName} ${data.userName}`),
+        
+        generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`),
         generateElement("p", { id: 'comment' }).append(data.comment),
-        generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`)
     ];
     let post = generateElement("li", postData);//.attr("class", bgColors.light);
     

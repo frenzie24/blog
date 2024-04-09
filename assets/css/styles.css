@@ -39,8 +39,8 @@ article {
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
-  margin: auto;
+  flex-direction: column;/* 
+  margin: auto; */
   background-clip: content-box;
   
 }
