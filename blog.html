@@ -12,50 +12,48 @@
     <script src="./assets/js/logic.js"></script>
     <script src="./assets/js/blog.js"></script>
 
-    <title>Document</title>
+    <title>Blog</title>
 </head>
 
 <body>
     <main id="main">
 
         <header id="navHeader">
-            <nav>
-                <a href="blog.html">
-                    <h2>Public Blog</h2>
-                </a>
+            <nav id="topNav">
+                <span id="navLinks">
+                    <a href="index.html">
+                        <h2>New Post</h2>
+                    </a>
+                    <a href="#posts">
+                        <h2>Top</h2>
+                    </a>
+                </span>
                 <label class="switch">
                     <input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleMode()">
                     <span class="slider"></span>
                 </label>
             </nav>
         </header>
-        <article id="postContainer" class="gradient-text-coffee">
-            <ol id="postList">
+        <article id="posts" class="gradient-text-coffee">
+            <ol id="postsOl">
                 <li class="post">
-                    <h2>POST TITLE</h3>
-                        <h3 id="userName">POSTED BY: USERNAME
-                    </h2>
+                    <h2>POST TITLE</h2>
+                    <h3 id="userName">POSTED BY: USERNAME
+                    </h3>
                     <h4>AT</h4>
                     <p id="comment">CONTENT</p>
                 </li>
 
             </ol>
         </article>
-        <aside>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Back</a>
-                    </li>
-                    <li> <a href="#posts">Posts</a>
-                    </li>
-                    <li> <button id="dark-mode"> </button>
-                    </li>
-                </ul>
-
-            </nav>
-        </aside>
+        <footer>
+            <h6>© 2024 Frenzied Dev</h6>
+            <a href="https://frenzie24.github.io/portfolio">
+                <h6>My Portfolio</h6>
+            </a>
+            <a href="https://github.com/frenzie24"><h6>GitHub</h6></a>
+        </footer>
     </main>
-    <script>setup()</script>
 </body>
 
 </html>

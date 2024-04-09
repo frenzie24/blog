@@ -25,39 +25,52 @@ function generateSimpleTag(tag, val) {
     return element;
 }
 
-function generateLi(data) {
-    let li = generateElement("li", { name: "post", class: "post", id: "post", key: data.key });
-  
-    let h3 = generateSimpleTag("h2", data.postTitle);
 
-    let h2 = generateElement("h3",{ id: 'comment' });
-    h2.append( `${postString.userName} ${data.userName}`)
-    let p = generateElement("p", { id: 'comment' });
-    p.append(data.comment);
-    let timeStamp = data.timeStamp.split(',');
-    let time = generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`);
-
-    // you can append multiple children in one line with jquery
-    li.append( h3,  h2, time, p);
-  
-    return li;
-
-}
 
 function generatePost(data) {
-    let postList = $("#postList");
-    let post = generateLi(data);
-    postList.append(post);
+    //let posts = $("#posts");
+    // spread operator to combine objs
+    const postData = {
+        name: "post",
+        name: "post",
+        class: "post",
+        id: "post",
+        style: "",
+        ...data
+    };
 
+    let timeStamp = data.timeStamp.split(',');
+    let children = [
+        generateSimpleTag("h2", data.postTitle),
+
+        generateElement("h3", { id: 'userName' }).append(`${postString.userName} ${data.userName}`),
+        
+        generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`),
+        generateElement("p", { id: 'comment' }).append(data.comment),
+    ];
+    let post = generateElement("li", postData);//.attr("class", bgColors.light);
+    
+ 
+    // you can append multiple children in one line with jquery
+    post.append(children);
+    return post;
+    // posts.append(post);
 }
 
-function setup() {
+function initBlog() {
     console.log('setup called')
-    $("#postList").empty();
+    let postsOl = $("#postsOl");
+
     let posts = getItem("posts");
-
+    let postsOlLi = [];
     posts.forEach((post) => {
-        generatePost(post);
+        postsOlLi.push(generatePost(post));
     })
-
+    postsOl.empty().css('list-style', 'none').append(...postsOlLi);
+   
 }
+
+$(function(){
+    initBlog();
+   
+});
