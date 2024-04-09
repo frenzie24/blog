@@ -63,7 +63,7 @@ function toggleMode() {
     setElementsDarkMode(on);
 
     let toggle = $('#darkModeToggle');//$("#darkModeToggle");
-    debugger;
+  
     console.log(`${msg.darkStatus}${!on}`);
     toggle.attr('checked', on);
     // toggle.setAttribute("checked",!on);
@@ -93,7 +93,7 @@ function setElementsDarkMode(on) {
     main.children("article").attr('class', on ? title == 'Blog' ? fontColors.lighter : fontColors.dark : fontColors.light);
     $("#topNav").attr('class', on ? title == 'Blog' ? fontColors.lighter : fontColors.dark : fontColors.light);
     $("#navHeader").attr('class', on ? bgColors.dark : bgColors.light);
-
+    $("footer").css('color', on? fontColors.lighter : fontColors.dark);
     return on;
 }
 

@@ -27,8 +27,8 @@ aside+nav {
     margin-right: 0;
 }
 
-h2,
 
+h2,
 h4,
 h5,
 h6 {
@@ -39,9 +39,7 @@ h6 {
     border-style: groove;
 }
 
-footer {
-    text-align: left;
-}
+
 
 ul {
     list-style: none;
@@ -50,15 +48,20 @@ ul {
 
 /* === styling for classes === */
 .post{
-    border-width: 1px 2px 1 2px;
+    border-width: 1px 2px 2px 2px;
     border-color: var(--light-coffee);
     border-style: groove;
     padding: 0 1em 0 1em;
-    margin-right: 1em;
     margin-bottom: .5em;
-
+    
     
 }
+.post:has(.dark-mode) {
+   
+    background-clip:unset
+}
+/* color, -webkit-text-fill-color, and -moz-text-fill-color 
+    are forced to ensure text visibility */
 .post p{
     margin-right: 1em;
     margin-left: 1em;
@@ -79,11 +82,23 @@ ul {
     margin: 0;
     padding-left: 1.5em;
 }
+
 #posts {
-   display: flex;
-    flex-wrap: wrap;
-    width: 80%;
+    background-color: var(--parchment);
+  
 }
+#navLinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;  
+}
+
+#navLinks a {
+    padding: 0 1em 0 0;
+}
+
+
 
 #postsOl {
     display: flex;
