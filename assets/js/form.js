@@ -53,6 +53,7 @@ function dataGather(e) {
 
         posts.push(data);
         setItem('posts', posts);
+        window.location.href = "blog.html";
     } else return;
 
 

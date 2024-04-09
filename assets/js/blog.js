@@ -63,9 +63,11 @@ function initBlog() {
 
     let posts = getItem("posts");
     let postsOlLi = [];
-    posts.forEach((post) => {
+    
+    posts ? posts.forEach((post) => {
         postsOlLi.push(generatePost(post));
-    })
+    }) : console.log('Storage empty');
+
     postsOl.empty().css('list-style', 'none').append(...postsOlLi);
    
 }
@@ -74,3 +76,5 @@ $(function(){
     initBlog();
    
 });
+
+var lo = "lorem "
