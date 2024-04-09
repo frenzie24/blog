@@ -40,21 +40,39 @@ h6 {
     border-style: groove;
 }
 
-p {
-    border-width: 0 0 2px;
-    border-color: var(--light-coffee);
-    border-style: groove;
-}
-
 footer {
     text-align: left;
 }
 
 ul {
     list-style: none;
+    maring-left: 3em;
 }
 
 /* === styling for classes === */
+.post{
+    border-width: 2px 0 0 0;
+    border-color: var(--light-coffee);
+    border-style: groove;
+    padding: 0 0 0 2em
+  /*   width: 100%; *//* 
+    background-color: var(--lightest-coffee); */
+    
+}
+.post p{
+    margin: auto;
+    margin-right: 1em;
+    padding: 1em 0em 1em 0em;
+    background-color: var(--parchment);
+    border-width: 0 0 2px 0;
+    border-color: var(--light-coffee);
+    border-style: groove;
+    color: var(--coffee);
+    -webkit-text-fill-color: var(--coffee);
+    -moz-text-fill-color: var(--coffee);
+}
+
+
 .posts {
     display: flex;
     flex-direction: row;
@@ -67,9 +85,4 @@ ul {
 .posts ol {
     width: 100%;
     list-style: none;
-}
-
-.post ol li {
-    width: 100px;
-    height: 200px;
 }

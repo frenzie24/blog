@@ -46,7 +46,8 @@ function generatePost(data) {
         generateElement("p", { id: 'comment' }).append(data.comment),
         generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`)
     ];
-    let post = generateElement("li", postData);
+    let post = generateElement("li", postData);//.attr("class", bgColors.light);
+    
  
     // you can append multiple children in one line with jquery
     post.append(children);
@@ -56,15 +57,15 @@ function generatePost(data) {
 
 function initBlog() {
     console.log('setup called')
-    let postsOL = $("#posts");
+    let postsOl = $("#postsOl");
 
     let posts = getItem("posts");
     let postsOlLi = [];
     posts.forEach((post) => {
         postsOlLi.push(generatePost(post));
     })
-    postsOL.empty().css('list-style', 'none').append(...postsOlLi);
-
+    postsOl.empty().css('list-style', 'none').append(...postsOlLi);
+   
 }
 
 $(function(){
