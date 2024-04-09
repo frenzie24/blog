@@ -1,12 +1,59 @@
 <!-- html for blog posts -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/blog.js"></script>
+
+    <title>Blog</title>
 </head>
+
 <body>
-    
+    <main id="main">
+
+        <header id="navHeader">
+            <nav id="topNav">
+                <span id="navLinks">
+                    <a href="index.html">
+                        <h2>New Post</h2>
+                    </a>
+                    <a href="#posts">
+                        <h2>Top</h2>
+                    </a>
+                </span>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleMode()">
+                    <span class="slider"></span>
+                </label>
+            </nav>
+        </header>
+        <article id="posts" class="gradient-text-coffee">
+            <ol id="postsOl">
+                <li class="post">
+                    <h2>POST TITLE</h2>
+                    <h3 id="userName">POSTED BY: USERNAME
+                    </h3>
+                    <h4>AT</h4>
+                    <p id="comment">CONTENT</p>
+                </li>
+
+            </ol>
+        </article>
+        <footer>
+            <h6>© 2024 Frenzied Dev</h6>
+            <a href="https://frenzie24.github.io/portfolio">
+                <h6>My Portfolio</h6>
+            </a>
+            <a href="https://github.com/frenzie24"><h6>GitHub</h6></a>
+        </footer>
+    </main>
 </body>
+
 </html>

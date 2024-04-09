@@ -6,15 +6,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./assets/css/sytles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/form.css">
-    <title>blog</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/logic.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <title>Post</title>
 </head>
 
 <body>
 
-    <main class="parchment-background">
-        <article class="gradient-text-coffee">
+    <main id="main">
+        <header id="navHeader">
+            <nav id="topNav">
+                <a href="blog.html">
+                    <h2>Public Blog</h2>
+                </a>
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle" name="darkModeToggle" onchange="toggleMode()">
+                    <span class="slider"></span>
+                </label>
+            </nav>
+        </header>
+        <article id="postContainer" class="gradient-text-coffee">
             <h1>Post Your Thoughts</h1>
             <form class="post">
                 <label for="userName">Username</label>
@@ -33,15 +48,21 @@
                     <textarea id="comment" name="comment" class="light-coffee-text"
                         placeholder="Your thoughts?"></textarea>
                 </div>
-                <input type="submit" value="POST" id="submit" class="light-coffee-text"/>
+                <button type="button" id="post" class="light-coffee-text">POST</button>
             </form>
             <footer>
-                Usernames are not unique.<br>
-                Custom Font Sourced From<br>
-                <a href="www.fonfabric.com">Fontfabric.com</a>
+                
+                <h6>© 2024 Frenzied Dev</h6>
+                <a href="https://frenzie24.github.io/portfolio">
+                    <h6>My Portfolio</h6>
+                </a>
+                <a href="https://github.com/frenzie24"><h6>GitHub</h6></a>
+                <span><h6>Usernames are not unique.</h6></span>
             </footer>
         </article>
     </main>
+
+    <script></script>
 </body>
 
 </html>

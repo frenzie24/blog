@@ -1,0 +1,288 @@
+/* general style sheet for the project */
+/*
+    color-hexes for coffee colors from color-hex.com
+    code to set text gradients is inspired by this post by Sarah L. Fossheim:
+    https://fossheim.io/writing/posts/css-text-gradient/
+
+    parchment image sourced from:
+    https://www.freepik.com/free-photo/pastel-yellow-vignette-concrete-textured-background_17118471.htm#query=parchment&position=4&from_view=keyword&track=sph&uuid=4a472ed2-887f-40db-9750-5772edb9fec5
+    Image by rawpixel.com
+    on Freepik
+*/
+
+
+/*variables */
+:root {
+  --parchment: #FCF5E5;
+  --coffee: #542a02;
+  --light-coffee: #9c6f44;
+  --lighter-coffee: #da9b60;
+  --dark-coffee: #271300;
+  --lightest-coffee: #fac695;
+}
+
+
+
+/* global styles */
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+a {
+  text-decoration: none;
+}
+
+article {
+
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* 
+  margin: auto; */
+  background-clip: content-box;
+
+}
+
+/* heading styles */
+
+h1 {
+  margin: auto;
+  padding: 1em 0 0 0;
+  border: none;
+  font-size: 300%;
+  font-weight: 900;
+}
+
+
+/* === header styles === */
+header {
+  display: flex;
+  padding: 0 20px 0 20px;
+
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-self: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+}
+
+
+/*
+    element styles
+*/
+
+footer {
+  display: flex;
+  padding: 3em 0 .5em 0;
+  font-size: 65%;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-end;
+
+}
+
+footer a {
+  color: inherit;
+}
+
+footer h6 {
+  margin-bottom: 0;
+  border: none;
+}
+
+footer span{
+  width: 100%;
+}
+footer span h6{
+  margin-top:.25em;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: auto;
+  width: 900px;
+  border-radius: 1em;
+  border-color: var(--dark-coffee);
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  background-color: var(--parchment);
+
+}
+
+/*#region text stylings*/
+
+/* 
+    this sets the background image to a linear-gradient designed to look like coffee 
+    it then renders the background only where text is
+    the text is transparent so the background graident shows through
+*/
+.gradient-text-coffee {
+  background-image: conic-gradient(var(--light-coffee), var(--coffee), var(--dark-coffee), var(--coffee), var(--light-coffee));
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.gradient-text-light-coffee {
+  background-image: conic-gradient(var(--parchment), var(--lightest-coffee), var(--parchment), var(--lightest-coffee), var(--parchment));
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.gradient-text-dark-coffee {
+  background-image: conic-gradient(var(--lightest-coffee), var(--light-coffee), var(--lighter-coffee), var(--light-coffee), var(--lightest-coffee));
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+/* pretty looking parchment background */
+.parchment-background {
+  background-image: url("../images/pastel-yellow-vignette-concrete-textured-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* adds border to element with no top or bottom, ridge style, and light coffee color */
+.sides-border-lighter-coffee {
+  border-top: none;
+  border-right: groove var(--lighter-coffee);
+  border-bottom: none;
+  border-left: groove var(--lighter-coffee);
+  border-width: 2px;
+}
+
+.sides-padding-linear-gradient-lighter-coffe-parchment {
+  background-image: linear-gradient(var(--lighter-coffee) 10%, var(--parchment), var(--lighter-coffee));
+  background-size: 100%;
+  background-clip: padding-box;
+
+}
+
+/* forces text in element to light coffee color */
+.light-coffee-text {
+  color: var(--light-coffee);
+  -webkit-text-fill-color: var(--light-coffee);
+  -moz-text-fill-color: var(--light-coffee);
+}
+
+/*#endregion*/
+
+
+/* dark-mode style */
+.dark-mode {
+  background-color: var(--dark-coffee);
+  color: var(--parchment);
+  -webkit-text-fill-color: revert;
+  -moz-text-fill-color: revert;
+  border-radius: 1em;
+  box-shadow: none;
+}
+
+/* switch slider styling copied from wcschools.com and edited */
+/*#region slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--lightest-coffee);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--coffee);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: var(--light-coffee);
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px var(--lightest-coffee);
+}
+
+input:checked+.slider:before {
+  background-color: var(--parchment);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*#endregion slider */
+/*
+    hex codes of shades of blue i like:
+    #bfced
+    #000000
+*/
+
+.colors {
+  color: #2d3b4c;
+  color: #bfcedb;
+  color: #0c1826;
+  /* dark navy */
+  color: #43474d;
+  color: #0a3635;
+  color: #084645;
+  color: #5aa5a4;
+  color: #338583;
+  color: #0daba8;
+
+}
