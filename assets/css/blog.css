@@ -5,67 +5,51 @@
     padding: 0;
 }
 
-main {
-   
-}
+/* #region main */
+main {}
 
 main>nav {
     width: 100%;
 }
 
-aside {
-    display: flex;
-    width: 100px;
-}
-
-aside+nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 100%;
-    margin-right: 0;
-}
-
+/* #endregion */
 
 h2,
 h4,
 h5,
 h6 {
     padding-top: 0;
-    
+
     border-width: 0 0 2px;
     border-color: var(--light-coffee);
     border-style: groove;
 }
 
 
-
+/* #region styles for lists, posts, and post */
 ul {
     list-style: none;
     padding-left: 1em;
 }
-
-/* === styling for classes === */
-.post{
+.post {
     border-width: 1px 2px 2px 2px;
     border-color: var(--light-coffee);
     border-style: groove;
     padding: 0 1em 0 1em;
     margin-bottom: .5em;
-    
-    
+
+
 }
+
 .post:has(.dark-mode) {
-   
-    background-clip:unset
+
+    background-clip: unset
 }
-/* color, -webkit-text-fill-color, and -moz-text-fill-color 
-    are forced to ensure text visibility */
-.post p{
+
+.post p {
     margin-right: 1em;
     margin-left: 1em;
-    padding:.3em;
+    padding: .3em;
     background-color: var(--parchment);
     border-width: 1px 0 1px 0;
     border-color: var(--light-coffee);
@@ -75,9 +59,13 @@ ul {
     -moz-text-fill-color: var(--coffee);
 }
 
-.post h3, h4, h5, h6 {
+.post h3,
+h4,
+h5,
+h6 {
     margin-left: .5em;
 }
+
 .post h6 {
     margin: 0;
     padding-left: 1.5em;
@@ -85,30 +73,32 @@ ul {
 
 #posts {
     background-color: var(--parchment);
-  
-}
-#navLinks {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: flex-start;  
-}
-
-#navLinks a {
-    padding: 0 1em 0 0;
-}
 
 
+}
 
 #postsOl {
     display: flex;
     flex-direction: column;
     list-style: none;
     padding: 0 1em 0 1em;
-  
+
 }
 
-#topNav h2{
+/* #endregion */
+
+#navLinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+#navLinks a {
+    padding: 0 1em 0 0;
+}
+
+#topNav h2 {
     border: none;
 }
 
