@@ -53,20 +53,16 @@ function checkToggle() {
 
 // toggles the style of the first article element in a document between light and dark
 function toggleMode() {
-
-    // var on = checkToggle();
-
     let on = checkToggle();
 
     console.log(`${msg.darkStatus}${on}\n${msg.darkChange}`);
     on = !on;
     setElementsDarkMode(on);
 
-    let toggle = $('#darkModeToggle');//$("#darkModeToggle");
+    let toggle = $('#darkModeToggle');
   
     console.log(`${msg.darkStatus}${!on}`);
     toggle.attr('checked', on);
-    // toggle.setAttribute("checked",!on);
     setItem("toggle", on);
 }
 
@@ -89,14 +85,14 @@ function setElementsDarkMode(on) {
     let main = $("#main");
     main.attr('class', on ? bgColors.dark : bgColors.light);
     const title = $("title").text();
-   
+   // in line conditionals to assign color schemes based on on = true/flase and if the document title is "Blog"
     main.children("article").attr('class', on ? title == 'Blog' ? fontColors.lighter : fontColors.dark : fontColors.light);
     $("#topNav").attr('class', on ? title == 'Blog' ? fontColors.lighter : fontColors.dark : fontColors.light);
     $("#navHeader").attr('class', on ? bgColors.dark : bgColors.light);
     $("footer").css('color', on? fontColors.lighter : fontColors.dark);
     return on;
 }
-
+// runs when document is ready
 $(function () {
     initLogic();
 

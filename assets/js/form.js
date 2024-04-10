@@ -58,11 +58,10 @@ function dataGather(e) {
 
 
 }
-
+// runs when document is ready
 window.onload = () => {
     const submitBtn = $("#post");
 
     submitBtn.on("click", dataGather);
-    //    submitBtn.addEventListener("click", dataGather)
 }
 
