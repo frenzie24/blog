@@ -2,23 +2,21 @@
 const postString = {
     userName: "Posted by:",
 }
+
+// creates an element with tag and sets initial attributes to data
 function generateElement(tag, data) {
     let element = $(`<${tag}>`, data);
-    /*
-        element.name = name;
-        element.className = className;
-        element.id = id;
-        element.key = key
-        */
     return element;
 }
-
+// creates an element with tag and sets its value to val, no attribute assignments
 function generateSimpleElement(tag, val) {
     let element = $(`<${tag}>`);
     element.val(val);
     return element;
 }
 
+
+// creates an element with tag and sets its innerText to val, no attribute assignments
 function generateSimpleTag(tag, val) {
     let element = $(`<${tag}>`);
     element.text(val);
@@ -26,10 +24,10 @@ function generateSimpleTag(tag, val) {
 }
 
 
-
+// Create a post object with passed data object
 function generatePost(data) {
-    //let posts = $("#posts");
-    // spread operator to combine objs
+   
+    // spread operator to combine objs and build our post's data
     const postData = {
         name: "post",
         name: "post",
@@ -38,7 +36,8 @@ function generatePost(data) {
         style: "",
         ...data
     };
-
+    // Splitting the timeStamp string lets us format the time easily using string literals
+    // children is an array with all of the child elements and their associated data needed to build the post
     let timeStamp = data.timeStamp.split(',');
     let children = [
         generateSimpleTag("h2", data.postTitle),
@@ -48,15 +47,19 @@ function generatePost(data) {
         generateSimpleTag("h6", `On ${timeStamp[0]}\nAt ${timeStamp[1]}`),
         generateElement("p", { id: 'comment' }).append(data.comment),
     ];
-    let post = generateElement("li", postData);//.attr("class", bgColors.light);
+    // create an li element with postData
+    let post = generateElement("li", postData);
     
- 
-    // you can append multiple children in one line with jquery
+    // you can append multiple children in one line with jquery!
+    // syntax for multiple children is (array), (element1, element2, element3...)
     post.append(children);
+    // after appending children to post return our post li element
     return post;
-    // posts.append(post);
+   
 }
 
+
+// ensures the Ol element is cleared and populated with stored posts data
 function initBlog() {
     console.log('setup called')
     let postsOl = $("#postsOl");
@@ -71,7 +74,7 @@ function initBlog() {
     postsOl.empty().css('list-style', 'none').append(...postsOlLi);
    
 }
-
+// Runs when document is ready
 $(function(){
     initBlog();
    
